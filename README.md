@@ -1,28 +1,28 @@
 # 📊 E-Commerce Analytics - Brazilian Olist Dataset
 
-Analisis data end-to-end terhadap dataset e-commerce Brazil (Olist) untuk menggali insight bisnis: tren pendapatan, kategori produk paling menguntungkan, segmentasi pelanggan (RFM), performa logistik, kepuasan pelanggan, dan perilaku pembayaran.
+End-to-end data analysis on the Brazilian e-commerce dataset (Olist) to uncover business insights: revenue trends, the most profitable product categories, customer segmentation (RFM), logistics performance, customer satisfaction, and payment behavior.
 
-## 🎯 Tujuan Proyek
+## 🎯 Project Goals
 
-Proyek ini bertujuan menjawab beberapa pertanyaan bisnis utama:
+This project aims to answer several key business questions:
 
-- Bagaimana tren pendapatan bulanan perusahaan dari waktu ke waktu?
-- Kategori produk apa yang paling menguntungkan?
-- Bagaimana sebaran geografis pelanggan dan penjual?
-- Siapa pelanggan paling bernilai (segmentasi RFM: Recency, Frequency, Monetary)?
-- Apakah waktu pengiriman memengaruhi rating ulasan pelanggan?
-- Bagaimana pola metode pembayaran yang digunakan pelanggan?
-- Seberapa besar toleransi pelanggan terhadap ongkos kirim dibanding harga barang?
+- How has the company's monthly revenue trended over time?
+- Which product categories are the most profitable?
+- What's the geographic distribution of customers and sellers?
+- Who are the most valuable customers (RFM segmentation: Recency, Frequency, Monetary)?
+- Does delivery time affect customer review ratings?
+- What payment method patterns do customers use?
+- How much shipping cost are customers willing to tolerate relative to item price?
 
-## 🗂️ Struktur Repository
+## 🗂️ Repository Structure
 
 ```
 ecommerce-analytics/
 ├── notebooks/
-│   └── ecommerce_analytics.ipynb   # Notebook utama analisis
+│   └── ecommerce_analytics.ipynb   # Main analysis notebook
 ├── data/
-│   └── README.md                   # Info & cara mendapatkan dataset (data mentah tidak di-push)
-├── requirements.txt                # Dependensi Python
+│   └── README.md                   # Dataset info & download instructions (raw data not pushed)
+├── requirements.txt                # Python dependencies
 ├── .gitignore
 ├── LICENSE
 └── README.md
@@ -31,59 +31,59 @@ ecommerce-analytics/
 ## 🧰 Tech Stack
 
 - Python 3
-- pandas & numpy - manipulasi dan agregasi data
-- matplotlib & seaborn - visualisasi data
+- pandas & numpy - data manipulation and aggregation
+- matplotlib & seaborn - data visualization
 - Jupyter Notebook
 
 ## 📁 Dataset
 
-Menggunakan **Brazilian E-Commerce Public Dataset by Olist** dari Kaggle: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+Uses the **Brazilian E-Commerce Public Dataset by Olist** from Kaggle: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
-Dataset mentah **tidak disertakan** di repo ini karena ukurannya cukup besar. Lihat [`data/README.md`](data/README.md) untuk detail file yang dibutuhkan dan cara mengunduhnya.
+The raw dataset is **not included** in this repo due to its size. See [`data/README.md`](data/README.md) for details on the required files and how to download them.
 
-## 🔍 Alur Analisis
+## 🔍 Analysis Workflow
 
-1. **Import & Load Data** - memuat data order, seller, dan geolocation
-2. **Data Cleaning & Preprocessing** - konversi tipe datetime, penanganan missing value
-3. **Revenue Over Time** - tren pendapatan bulanan
-4. **Top Profitable Product Categories** - 10 kategori produk dengan pendapatan tertinggi
-5. **Geospatial Analysis** - distribusi pelanggan & penjual per state
-6. **Customer Segmentation (RFM Analysis)** - segmentasi pelanggan berdasarkan Recency, Frequency, Monetary
-7. **Logistics Performance & Customer Satisfaction** - korelasi waktu pengiriman dengan review score
-8. **Logistics Density Map** - pemetaan geospasial titik lokasi di peta Brazil
-9. **Financial & Payment Behavior** - analisis metode pembayaran
-10. **Order Economics** - rasio ongkos kirim terhadap harga barang
+1. **Import & Load Data** - load order, seller, and geolocation data
+2. **Data Cleaning & Preprocessing** - datetime type conversion, missing value handling
+3. **Revenue Over Time** - monthly revenue trend
+4. **Top Profitable Product Categories** - top 10 product categories by revenue
+5. **Geospatial Analysis** - customer & seller distribution by state
+6. **Customer Segmentation (RFM Analysis)** - customer segmentation based on Recency, Frequency, Monetary
+7. **Logistics Performance & Customer Satisfaction** - correlation between delivery time and review score
+8. **Logistics Density Map** - geospatial mapping of location points across Brazil
+9. **Financial & Payment Behavior** - payment method analysis
+10. **Order Economics** - shipping cost to item price ratio
 
-## 🚀 Cara Menjalankan
+## 🚀 How to Run
 
-1. Clone repository ini:
+1. Clone this repository:
    ```bash
-   git clone https://github.com/<username-anda>/ecommerce-analytics.git
+   git clone https://github.com/<your-username>/ecommerce-analytics.git
    cd ecommerce-analytics
    ```
 
-2. (Opsional tapi disarankan) buat virtual environment:
+2. (Optional but recommended) create a virtual environment:
    ```bash
    python -m venv venv
    source venv/bin/activate        # Windows: venv\Scripts\activate
    ```
 
-3. Install dependensi:
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Unduh dataset sesuai instruksi di [`data/README.md`](data/README.md) dan letakkan file CSV di folder `data/`.
+4. Download the dataset following the instructions in [`data/README.md`](data/README.md) and place the CSV files in the `data/` folder.
 
-5. Jalankan notebook:
+5. Run the notebook:
    ```bash
    jupyter notebook notebooks/ecommerce_analytics.ipynb
    ```
 
-## 📌 Catatan
+## 📌 Notes
 
-Notebook ini dibuat untuk tujuan eksplorasi dan pembelajaran data analytics. Kontribusi, saran, atau pull request sangat terbuka.
+This notebook was built for data analytics exploration and learning purposes. Contributions, suggestions, and pull requests are very welcome.
 
-## 📄 Lisensi
+## 📄 License
 
-Proyek ini menggunakan lisensi [MIT](LICENSE).
+This project is licensed under [MIT](LICENSE).

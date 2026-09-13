@@ -1,27 +1,27 @@
 # Data
 
-File CSV mentah **tidak disertakan** di repo ini (salah satunya berukuran ±59 MB, terlalu besar untuk disimpan di Git secara langsung dan lebih baik diunduh langsung dari sumber aslinya agar repo tetap ringan).
+The raw CSV files are **not included** in this repository (one of them is ±59 MB, too large to store directly in Git — it's better to download it straight from the original source so the repo stays lightweight).
 
-## Sumber Data
+## Data Source
 
-Dataset yang digunakan berasal dari **Brazilian E-Commerce Public Dataset by Olist** (Kaggle):
+The dataset used comes from the **Brazilian E-Commerce Public Dataset by Olist** (Kaggle):
 https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
-## File yang dibutuhkan
+## Required Files
 
-Letakkan file berikut di dalam folder `data/` ini sebelum menjalankan notebook:
+Place the following files inside this `data/` folder before running the notebook:
 
-| Nama file di notebook | Deskripsi | Ukuran (approx.) |
+| File name in the notebook | Description | Size (approx.) |
 |---|---|---|
-| `dataset_ecomerce_analytics.csv` | Data gabungan order, customer, produk, pembayaran, dan review | ~20 MB |
-| `olist_sellers_dataset.csv` | Data penjual (seller) beserta lokasi | ~170 KB |
-| `olist_geolocation_dataset.csv` | Data koordinat lat/lng berdasarkan kode pos | ~59 MB |
+| `dataset_ecomerce_analytics.csv` | Merged data of orders, customers, products, payments, and reviews | ~20 MB |
+| `olist_sellers_dataset.csv` | Seller data including location | ~170 KB |
+| `olist_geolocation_dataset.csv` | Lat/lng coordinate data by zip code prefix | ~59 MB |
 
-## Cara mendapatkan data
+## How to Get the Data
 
-1. Buat akun / login di [Kaggle](https://www.kaggle.com).
-2. Download dataset dari link di atas (perlu Kaggle API atau download manual sebagai ZIP).
-3. Ekstrak file CSV yang relevan ke dalam folder `data/`.
-4. Sesuaikan nama file jika perlu, atau ubah path di sel pertama notebook (`pd.read_csv(...)`) agar sesuai dengan nama file hasil download.
+1. Create an account / log in to [Kaggle](https://www.kaggle.com).
+2. Download the dataset from the link above (requires the Kaggle API or a manual ZIP download).
+3. Extract the relevant CSV files into the `data/` folder.
+4. Rename the files if needed, or update the path in the notebook's first cell (`pd.read_csv(...)`) to match the downloaded file names.
 
-> Catatan: `dataset_ecomerce_analytics.csv` merupakan hasil penggabungan (merge) beberapa tabel asli Olist (orders, order_items, order_payments, order_reviews, customers, products, product_category_name_translation). Jika Anda hanya mengunduh dataset mentah dari Kaggle, Anda perlu melakukan proses join/merge sendiri sebelum menjalankan notebook ini.
+> Note: `dataset_ecomerce_analytics.csv` is the result of merging several original Olist tables (orders, order_items, order_payments, order_reviews, customers, products, product_category_name_translation). If you only download the raw dataset from Kaggle, you'll need to perform the join/merge process yourself before running this notebook.
